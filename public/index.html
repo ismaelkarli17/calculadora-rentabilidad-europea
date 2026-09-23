@@ -3,126 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Rentabilidad Europea | Cuentas Remuneradas</title>
+    <title>Calculadora de Rentabilidad Europea | Cuentas Remuneradas y Depósitos</title>
+    <meta name="description" content="Calcula el rendimiento neto real de tus ahorros en las mejores cuentas remuneradas y fondos monetarios de Europa. Actualización diaria.">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Header -->
-    <header class="bg-blue-900 text-white py-8 shadow-md">
-        <div class="max-w-4xl mx-auto px-4">
-            <h1 class="text-3xl font-bold">Rastreador de Rentabilidad Europea</h1>
-            <p class="text-blue-200 mt-2">Calcula tu beneficio neto real (descontando el 19% de IRPF) en las mejores cuentas remuneradas.</p>
+    <!-- Header Premium -->
+    <header class="bg-gradient-to-r from-blue-900 to-indigo-800 text-white py-12 shadow-lg">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl font-extrabold mb-4">Rastreador de Rentabilidad Europea</h1>
+            <p class="text-blue-100 text-lg">Calcula tu beneficio neto real (descontando el 19% de IRPF) en las mejores cuentas remuneradas del mercado.</p>
         </div>
     </header>
 
     <main class="max-w-4xl mx-auto px-4 py-8">
         
+        <!-- HUECO PARA ANUNCIO ADSENSE TOP -->
+        <div class="w-full h-24 bg-slate-200 border border-slate-300 border-dashed rounded-lg flex items-center justify-center text-slate-400 text-sm mb-8">
+            [Espacio reservado para Banner Publicitario Superior]
+        </div>
+
         <!-- Análisis de la IA -->
-        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8">
-            <div class="flex items-center gap-2 mb-3">
-                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-2.5 py-0.5 rounded uppercase tracking-wide">Análisis Quant</span>
-                <span id="fecha-act" class="text-xs text-slate-500">Cargando fecha...</span>
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 mb-8 flex flex-col md:flex-row gap-6 items-center">
+            <div class="flex-1">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Análisis Cuantitativo Diario</span>
+                    <span id="fecha-act" class="text-xs text-slate-500 font-medium">Cargando datos...</span>
+                </div>
+                <p id="analisis-ia" class="text-slate-600 text-sm leading-relaxed">Consultando al motor central...</p>
             </div>
-            <p id="analisis-ia" class="text-slate-600 text-sm leading-relaxed italic">Consultando al motor de IA...</p>
         </section>
 
         <!-- Calculadora Interactiva -->
-        <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-600 mb-8">
-            <h2 class="text-xl font-bold mb-4">¿Cuánto dinero quieres rentabilizar?</h2>
-            <div class="flex items-center justify-between mb-4">
-                <span class="text-slate-500 text-sm">1.000 €</span>
-                <span id="capital-display" class="text-3xl font-black text-blue-900">10.000 €</span>
-                <span class="text-slate-500 text-sm">100.000 €</span>
+        <section class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-indigo-600 mb-8 relative overflow-hidden">
+            <h2 class="text-2xl font-bold mb-6 text-center">¿Cuánto capital quieres rentabilizar?</h2>
+            <div class="flex items-center justify-between mb-4 px-2">
+                <span class="text-slate-400 font-semibold">1.000 €</span>
+                <span id="capital-display" class="text-4xl font-black text-indigo-700 tracking-tight">10.000 €</span>
+                <span class="text-slate-400 font-semibold">100.000 €</span>
             </div>
-            <input type="range" id="capital-slider" min="1000" max="100000" step="1000" value="10000" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer mb-2">
-            <p class="text-xs text-slate-400 text-center">Desliza para ajustar tu capital inicial</p>
+            <input type="range" id="capital-slider" min="1000" max="100000" step="1000" value="10000" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-600 mb-2">
+            <p class="text-xs text-slate-400 text-center font-medium">Mueve el deslizador para ajustar tu capital inicial</p>
         </section>
 
         <!-- Ranking de Ofertas -->
-        <h3 class="text-lg font-bold text-slate-700 mb-4">Ranking de Rentabilidad Neta</h3>
-        <div id="contenedor-ofertas" class="space-y-4">
-            <!-- Las tarjetas se inyectan aquí con JS -->
+        <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+            <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            Ranking de Rentabilidad Neta
+        </h3>
+        <div id="contenedor-ofertas" class="space-y-4 mb-12">
+            <!-- Tarjetas JS -->
         </div>
 
+        <!-- HUECO PARA ANUNCIO ADSENSE MIDDLE -->
+        <div class="w-full h-32 bg-slate-200 border border-slate-300 border-dashed rounded-lg flex items-center justify-center text-slate-400 text-sm mb-12">
+            [Espacio reservado para Banner Publicitario Central]
+        </div>
+
+        <!-- SECCIÓN SEO Y TEXTO PARA ADSENSE -->
+        <section class="bg-slate-100 p-8 rounded-xl text-slate-700 text-sm">
+            <h2 class="text-xl font-bold mb-4 text-slate-800">Preguntas Frecuentes sobre Ahorro e Impuestos</h2>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold">¿Cómo se calculan los intereses netos?</h4>
+                    <p class="mt-1">Nuestra herramienta toma el TIN (Tipo de Interés Nominal) anual que ofrece el banco y calcula el beneficio bruto. Sobre ese beneficio, en España se aplica automáticamente una retención de IRPF sobre los rendimientos del capital mobiliario (19% para los primeros 6.000€ de ganancia). El resultado que ves es el dinero limpio que llega a tu cuenta.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">¿Qué diferencia hay entre un fondo monetario y una cuenta remunerada?</h4>
+                    <p class="mt-1">Una cuenta remunerada tradicional está cubierta por el Fondo de Garantía de Depósitos (FGD) europeo, que protege hasta 100.000 € por titular y banco en caso de quiebra. Un fondo monetario invierte en deuda estatal a muy corto plazo y está separado del balance del comercializador, ofreciendo una alta seguridad y liquidez diaria.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold">¿Por qué hay límites remunerados?</h4>
+                    <p class="mt-1">Muchas entidades utilizan altas rentabilidades como gancho comercial, pero limitan la cantidad máxima sobre la que aplican ese interés (por ejemplo, 50.000 €). Si depositas más de ese límite, el exceso no genera rendimientos. Nuestro algoritmo calcula exactamente este límite para darte cifras reales.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <script>
-        const IRPF = 0.19; // Retención tramo inicial España
-        let ofertasData = [];
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs mt-12">
+        <p>© 2026 Rastreador de Rentabilidad Europea. Datos calculados con fines informativos.</p>
+    </footer>
 
-        // Referencias al DOM
+    <script>
+        const IRPF = 0.19;
+        let ofertasData = [];
         const slider = document.getElementById('capital-slider');
         const displayCapital = document.getElementById('capital-display');
         const contenedor = document.getElementById('contenedor-ofertas');
-
-        // Formateador de moneda
         const euro = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 2 });
 
-        // Cargar JSON
         async function cargarDatos() {
             try {
                 const response = await fetch('data/cuentas.json');
                 const data = await response.json();
-                
                 ofertasData = data.ranking;
                 document.getElementById('fecha-act').innerText = `Actualizado: ${data.ultima_actualizacion}`;
                 document.getElementById('analisis-ia').innerText = data.analisis_mercado;
-                
                 renderizarTarjetas(parseInt(slider.value));
             } catch (error) {
                 document.getElementById('analisis-ia').innerText = "Error cargando los datos del mercado en vivo.";
             }
         }
 
-        // Renderizar cálculos exactos según el capital del slider
         function renderizarTarjetas(capital) {
             contenedor.innerHTML = '';
-            
             ofertasData.forEach(oferta => {
-                // Lógica de topes: si metes más del límite remunerado, el sobrante no renta
                 let capitalRemunerado = Math.min(capital, oferta.limite_remunerado);
-                
                 let brutoAnual = capitalRemunerado * (oferta.tin_anual / 100);
                 let retencion = brutoAnual * IRPF;
                 let netoAnual = brutoAnual - retencion;
                 let netoMensual = netoAnual / 12;
 
                 const card = document.createElement('div');
-                card.className = "bg-white p-5 rounded-lg shadow-sm border border-slate-200 hover:border-blue-400 transition-colors flex flex-col md:flex-row justify-between items-center gap-4";
+                card.className = "bg-white p-5 md:p-6 rounded-xl shadow-sm border border-slate-200 hover:border-indigo-400 hover:shadow-md transition-all flex flex-col md:flex-row justify-between items-center gap-6 relative overflow-hidden";
                 
                 card.innerHTML = `
                     <div class="flex-1 w-full">
-                        <div class="flex justify-between items-start mb-2">
-                            <h4 class="text-lg font-bold text-slate-800">${oferta.entidad}</h4>
-                            <span class="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded">${oferta.tin_anual}% TIN</span>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h4 class="text-xl font-bold text-slate-800">${oferta.entidad}</h4>
+                            <span class="bg-green-100 text-green-800 text-xs font-black px-2.5 py-1 rounded uppercase">${oferta.tin_anual}% TIN</span>
                         </div>
-                        <p class="text-xs text-slate-500 mb-1">Tipo: ${oferta.tipo_producto} | Garantía: ${oferta.fondo_garantia}</p>
-                        <p class="text-xs text-slate-500">Límite remunerado: ${euro.format(oferta.limite_remunerado)}</p>
+                        <div class="text-sm text-slate-500 space-y-1 mt-3">
+                            <p class="flex items-center gap-1">✅ <b>Protección:</b> ${oferta.fondo_garantia}</p>
+                            <p class="flex items-center gap-1">⚠️ <b>Límite Remunerado:</b> ${euro.format(oferta.limite_remunerado)}</p>
+                            <p class="flex items-center gap-1">📅 <b>Abono:</b> ${oferta.pago}</p>
+                        </div>
                     </div>
                     
-                    <div class="bg-slate-50 p-3 rounded-md border border-slate-100 text-center min-w-[140px]">
-                        <p class="text-xs text-slate-500 uppercase tracking-wide">Neto Mensual</p>
-                        <p class="text-2xl font-black text-blue-600">${euro.format(netoMensual)}</p>
-                        <p class="text-xs text-slate-400 mt-1">Anual: ${euro.format(netoAnual)}</p>
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200 text-center min-w-[160px]">
+                        <p class="text-xs text-slate-500 uppercase font-bold tracking-wider mb-1">Beneficio Mensual</p>
+                        <p class="text-3xl font-black text-indigo-600">${euro.format(netoMensual)}</p>
+                        <p class="text-xs text-slate-500 mt-2 font-medium">Total Anual: ${euro.format(netoAnual)}</p>
                     </div>
 
-                    <a href="${oferta.url_afiliado}" target="_blank" rel="noopener nofollow" class="w-full md:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors">
-                        Abrir Cuenta
+                    <a href="${oferta.url_afiliado}" target="_blank" rel="noopener nofollow" class="w-full md:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-lg text-center transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Ver Oferta
                     </a>
                 `;
                 contenedor.appendChild(card);
             });
         }
 
-        // Listeners del slider
         slider.addEventListener('input', (e) => {
             const val = parseInt(e.target.value);
             displayCapital.innerText = euro.format(val);
             renderizarTarjetas(val);
         });
 
-        // Inicio
         cargarDatos();
     </script>
 </body>
