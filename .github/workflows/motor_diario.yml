@@ -34,5 +34,5 @@ jobs:
           git config --global user.name "GitHub Actions Bot"
           git config --global user.email "actions@github.com"
           git add public/data/cuentas.json
-          git commit -m "Actualización diaria de rentabilidades [skip ci]" || echo "Sin cambios en los tipos de interés"
+          git commit -m "Actualización diaria de rentabilidades" || echo "Sin cambios en los tipos de interés"
           git push
