@@ -1,0 +1,46 @@
+{
+  "ultima_actualizacion": "2026-09-23 19:34",
+  "inflacion_referencia": 2.2,
+  "analisis_mercado": "Actualización de tipos consolidada para el ciclo actual.",
+  "ranking": [
+    {
+      "entidad": "Trade Republic",
+      "tipo_producto": "Cuenta Remunerada",
+      "tin_anual": 3.75,
+      "limite_remunerado": 50000,
+      "pago": "Mensual",
+      "fondo_garantia": "Alemania / Irlanda (100.000 €)",
+      "url_afiliado": "https://tu-enlace-de-afiliado-aqui.com",
+      "tin_neto": 3.04,
+      "rendimiento_real_neto": 0.84,
+      "ganancia_neta_10k_anual": 303.75,
+      "ganancia_neta_10k_mensual": 25.31
+    },
+    {
+      "entidad": "Revolut (Cuentas Flexibles)",
+      "tipo_producto": "Fondo Monetario",
+      "tin_anual": 3.6,
+      "limite_remunerado": 100000,
+      "pago": "Diario",
+      "fondo_garantia": "Inversión SIPC / Lituania",
+      "url_afiliado": "https://tu-enlace-de-afiliado-aqui.com",
+      "tin_neto": 2.92,
+      "rendimiento_real_neto": 0.72,
+      "ganancia_neta_10k_anual": 291.6,
+      "ganancia_neta_10k_mensual": 24.3
+    },
+    {
+      "entidad": "MyInvestor",
+      "tipo_producto": "Cuenta Remunerada",
+      "tin_anual": 2.5,
+      "limite_remunerado": 70000,
+      "pago": "Mensual",
+      "fondo_garantia": "España (100.000 €)",
+      "url_afiliado": "https://tu-enlace-de-afiliado-aqui.com",
+      "tin_neto": 2.03,
+      "rendimiento_real_neto": -0.17,
+      "ganancia_neta_10k_anual": 202.5,
+      "ganancia_neta_10k_mensual": 16.88
+    }
+  ]
+}
