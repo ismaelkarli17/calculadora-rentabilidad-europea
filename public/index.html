@@ -119,8 +119,23 @@
                              ? Infinity 
                              : oferta.limite_remunerado;
                 
-                let capitalRemunerado = Math.min(capital, limite);
-                let brutoAnual = capitalRemunerado * (oferta.tin_anual / 100);
+                let brutoAnual = 0;
+
+                // Lógica especial para Trade Republic (El interés por tramos)
+                if (oferta.entidad === "Trade Republic" && capital > limite) {
+                    let capitalBase = limite; // Los primeros 50.000
+                    let capitalExceso = capital - limite; // Lo que sobra
+                    
+                    let brutoBase = capitalBase * (oferta.tin_anual / 100); // Al TIN de la oferta
+                    let brutoExceso = capitalExceso * (2.53 / 100); // Al 2.53% del BCE
+                    
+                    brutoAnual = brutoBase + brutoExceso;
+                } else {
+                    // Lógica normal para el resto de bancos (se topa y ya está)
+                    let capitalRemunerado = Math.min(capital, limite);
+                    brutoAnual = capitalRemunerado * (oferta.tin_anual / 100);
+                }
+
                 let retencion = brutoAnual * IRPF;
                 let netoAnual = brutoAnual - retencion;
                 let netoMensual = netoAnual / 12;
@@ -133,7 +148,7 @@
                 };
             });
 
-            // 2. Ordenamos el array de mayor a menor beneficio neto anual (¡Magia pura!)
+            // 2. Ordenamos el array de mayor a menor beneficio neto anual
             resultadosCalculados.sort((a, b) => b.netoAnual - a.netoAnual);
 
             // 3. Pintamos las tarjetas ya ordenadas
