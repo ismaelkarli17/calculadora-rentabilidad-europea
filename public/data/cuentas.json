@@ -1,7 +1,7 @@
 {
-  "ultima_actualizacion": "2026-09-23 20:27",
+  "ultima_actualizacion": "2026-09-24 12:16",
   "inflacion_referencia": 2.2,
-  "analisis_mercado": "Actualización de tipos consolidada para el ciclo actual.",
+  "analisis_mercado": "Comparativa de mercado incluyendo banca tradicional (Sabadell, Bankinter) vs Neobancos.",
   "ranking": [
     {
       "entidad": "Trade Republic",
@@ -9,38 +9,62 @@
       "tin_anual": 3.75,
       "limite_remunerado": 50000,
       "pago": "Mensual",
-      "fondo_garantia": "Alemania / Irlanda (100.000 €)",
-      "url_afiliado": "https://refnocode.trade.re/lp85t9dq",
-      "tin_neto": 3.04,
-      "rendimiento_real_neto": 0.84,
-      "ganancia_neta_10k_anual": 303.75,
-      "ganancia_neta_10k_mensual": 25.31
-    },
-    {
-      "entidad": "Revolut (Cuentas Flexibles)",
-      "tipo_producto": "Fondo Monetario",
-      "tin_anual": 3.6,
-      "limite_remunerado": 100000,
-      "pago": "Diario",
-      "fondo_garantia": "Inversión SIPC / Lituania",
-      "url_afiliado": "https://tu-enlace-de-afiliado-aqui.com",
-      "tin_neto": 2.92,
-      "rendimiento_real_neto": 0.72,
-      "ganancia_neta_10k_anual": 291.6,
-      "ganancia_neta_10k_mensual": 24.3
+      "fondo_garantia": "Alemania (100.000 €)",
+      "url_afiliado": "https://refnocode.trade.re/lp85t9dq"
     },
     {
       "entidad": "MyInvestor",
       "tipo_producto": "Cuenta Remunerada",
-      "tin_anual": 2.5,
+      "tin_anual": 2.50,
       "limite_remunerado": 70000,
       "pago": "Mensual",
       "fondo_garantia": "España (100.000 €)",
-      "url_afiliado": "https://newapp.myinvestor.es/do/signup?promotionalCode=caXdc",
-      "tin_neto": 2.03,
-      "rendimiento_real_neto": -0.17,
-      "ganancia_neta_10k_anual": 202.5,
-      "ganancia_neta_10k_mensual": 16.88
+      "url_afiliado": "https://newapp.myinvestor.es/do/signup?promotionalCode=caXdc"
+    },
+    {
+      "entidad": "Revolut (Cuentas Flexibles)",
+      "tipo_producto": "Fondo Monetario",
+      "tin_anual": 3.60,
+      "limite_remunerado": 100000,
+      "pago": "Diario",
+      "fondo_garantia": "Inversión SIPC / Lituania",
+      "url_afiliado": "https://tu-enlace-de-afiliado-aqui.com"
+    },
+    {
+      "entidad": "Banco Sabadell",
+      "tipo_producto": "Cuenta Online",
+      "tin_anual": 2.50,
+      "limite_remunerado": 50000,
+      "pago": "Mensual",
+      "fondo_garantia": "España (100.000 €)",
+      "url_afiliado": null
+    },
+    {
+      "entidad": "Bankinter (1º año)",
+      "tipo_producto": "Cuenta Nómina",
+      "tin_anual": 5.00,
+      "limite_remunerado": 10000,
+      "pago": "Semestral",
+      "fondo_garantia": "España (100.000 €)",
+      "url_afiliado": null
+    },
+    {
+      "entidad": "N26 (Estándar)",
+      "tipo_producto": "Cuenta Remunerada",
+      "tin_anual": 2.26,
+      "limite_remunerado": 999999999,
+      "pago": "Mensual",
+      "fondo_garantia": "Alemania (100.000 €)",
+      "url_afiliado": null
+    },
+    {
+      "entidad": "Renault Bank",
+      "tipo_producto": "Cuenta Contigo",
+      "tin_anual": 2.73,
+      "limite_remunerado": 999999999,
+      "pago": "Mensual",
+      "fondo_garantia": "Francia (100.000 €)",
+      "url_afiliado": null
     }
   ]
 }
